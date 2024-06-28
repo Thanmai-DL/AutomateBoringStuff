@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>
+    </title>
+    <style>
+        body {
+            line-height: 116%;
+            font-family: Aptos;
+            font-size: 12pt
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            margin: 0pt 0pt 8pt
+        }
+
+        li {
+            margin-top: 0pt;
+            margin-bottom: 8pt
+        }
+
+        h1 {
+            margin-top: 18pt;
+            margin-bottom: 4pt;
+            page-break-inside: avoid;
+            page-break-after: avoid;
+            line-height: 116%;
+            font-family: 'Aptos Display';
+            font-size: 20pt;
+            font-weight: normal;
+            color: #0f4761
+        }
+
+        h2 {
+            margin-top: 8pt;
+            margin-bottom: 4pt;
+            page-break-inside: avoid;
+            page-break-after: avoid;
+            line-height: 116%;
+            font-family: 'Aptos Display';
+            font-size: 16pt;
+            font-weight: normal;
+            color: #0f4761
+        }
+
+        h3 {
+            margin-top: 8pt;
+            margin-bottom: 4pt;
+            page-break-inside: avoid;
+            page-break-after: avoid;
+            line-height: 116%;
+            font-family: Aptos;
+            font-size: 14pt;
+            font-weight: normal;
+            color: #0f4761
+        }
+
+        h4 {
+            margin-top: 4pt;
+            margin-bottom: 2pt;
+            page-break-inside: avoid;
+            page-break-after: avoid;
+            line-height: 116%;
+            font-family: Aptos;
+            font-size: 12pt;
+            font-weight: normal;
+            font-style: italic;
+            color: #0f4761
+        }
+
+        h5 {
+            margin-top: 4pt;
+            margin-bottom: 2pt;
+            page-break-inside: avoid;
+            page-break-after: avoid;
+            line-height: 116%;
+            font-family: Aptos;
+            font-size: 12pt;
+            font-weight: normal;
+            color: #0f4761
+        }
+
+        h6 {
+            margin-top: 2pt;
+            margin-bottom: 0pt;
+            page-break-inside: avoid;
+            page-break-after: avoid;
+            line-height: 116%;
+            font-family: Aptos;
+            font-size: 12pt;
+            font-weight: normal;
+            font-style: italic;
+            color: #595959
+        }
+
+        .Heading7 {
+            margin-top: 2pt;
+            margin-bottom: 0pt;
+            page-break-inside: avoid;
+            page-break-after: avoid;
+            line-height: 116%;
+            font-family: Aptos;
+            font-size: 12pt;
+            font-weight: normal;
+            font-style: normal;
+            color: #595959
+        }
+
+        .Heading8 {
+            margin-bottom: 0pt;
+            page-break-inside: avoid;
+            page-break-after: avoid;
+            line-height: 116%;
+            font-family: Aptos;
+            font-size: 12pt;
+            font-weight: normal;
+            font-style: italic;
+            color: #272727
+        }
+
+        .Heading9 {
+            margin-bottom: 0pt;
+            page-break-inside: avoid;
+            page-break-after: avoid;
+            line-height: 116%;
+            font-family: Aptos;
+            font-size: 12pt;
+            font-weight: normal;
+            font-style: normal;
+            color: #272727
+        }
+
+        .IntenseQuote {
+            margin: 18pt 43.2pt;
+            text-align: center;
+            line-height: 116%;
+            border-top: 0.75pt solid #0f4761;
+            border-bottom: 0.75pt solid #0f4761;
+            padding-top: 10pt;
+            padding-bottom: 10pt;
+            font-size: 12pt;
+            font-style: italic;
+            color: #0f4761
+        }
+
+        .ListParagraph {
+            margin-left: 36pt;
+            margin-bottom: 8pt;
+            line-height: 116%;
+            font-size: 12pt
+        }
+
+        .Quote {
+            margin-top: 8pt;
+            margin-bottom: 8pt;
+            text-align: center;
+            line-height: 116%;
+            font-size: 12pt;
+            font-style: italic;
+            color: #404040
+        }
+
+        .Subtitle {
+            margin-bottom: 8pt;
+            line-height: 116%;
+            font-size: 14pt;
+            letter-spacing: 0.75pt;
+            color: #595959
+        }
+
+        .Title {
+            margin-bottom: 4pt;
+            line-height: normal;
+            font-family: 'Aptos Display';
+            font-size: 28pt;
+            letter-spacing: -0.5pt
+        }
+
+        span.FollowedHyperlink {
+            text-decoration: underline;
+            color: #96607d
+        }
+
+        span.Heading1Char {
+            font-family: 'Aptos Display';
+            font-size: 20pt;
+            color: #0f4761
+        }
+
+        span.Heading2Char {
+            font-family: 'Aptos Display';
+            font-size: 16pt;
+            color: #0f4761
+        }
+
+        span.Heading3Char {
+            font-size: 14pt;
+            color: #0f4761
+        }
+
+        span.Heading4Char {
+            font-style: italic;
+            color: #0f4761
+        }
+
+        span.Heading5Char {
+            color: #0f4761
+        }
+
+        span.Heading6Char {
+            font-style: italic;
+            color: #595959
+        }
+
+        span.Heading7Char {
+            color: #595959
+        }
+
+        span.Heading8Char {
+            font-style: italic;
+            color: #272727
+        }
+
+        span.Heading9Char {
+            color: #272727
+        }
+
+        span.Hyperlink {
+            text-decoration: underline;
+            color: #467886
+        }
+
+        span.IntenseEmphasis {
+            font-style: italic;
+            color: #0f4761
+        }
+
+        span.IntenseQuoteChar {
+            font-style: italic;
+            color: #0f4761
+        }
+
+        span.IntenseReference {
+            font-weight: bold;
+            font-variant: small-caps;
+            letter-spacing: 0.25pt;
+            color: #0f4761
+        }
+
+        span.QuoteChar {
+            font-style: italic;
+            color: #404040
+        }
+
+        span.SubtitleChar {
+            font-size: 14pt;
+            letter-spacing: 0.75pt;
+            color: #595959
+        }
+
+        span.TitleChar {
+            font-family: 'Aptos Display';
+            font-size: 28pt;
+            letter-spacing: -0.5pt
+        }
+
+        span.UnresolvedMention {
+            color: #605e5c;
+            background-color: #e1dfdd
+        }
+
+        @media (max-width: 900px) {
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .table-container {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+
+            td,
+            th {
+                padding: 8px;
+                text-align: left;
+                border: 1px solid #ddd;
+            }
+        }
+    </style>
+</head>
+
+<body spellcheck="false">
+    <p style="line-height: 1.15; background-color: rgb(255, 255, 255);"><span style='font-family: "Calibri Light"; font-size: 16px; color: rgb(0, 0, 0);'>Hey [Name],</span></p>
+    <p style="line-height: 1.15; background-color: rgb(255, 255, 255);"><span style='font-family: "Calibri Light"; font-size: 16px; color: rgb(0, 0, 0);'>I am Thanmai 👋. I am writing to apply for [Position] at [Company].</span></p>
+    <p style="line-height: 1.15; background-color: rgb(255, 255, 255);"><span style="font-size: 16px; color: rgb(0, 0, 0);"><em><span style='font-family: "Calibri Light";'>A bit about my professional lore so far: my interest in understanding how the internet works and how computers communicate led me to learn computer networking and earn my&nbsp;</span></em><strong><em><span style='font-family: "Calibri Light";'>CCNA</span></em></strong><em><span style='font-family: "Calibri Light";'>&nbsp;certification. This certification helped me build a good foundation in networking. With this certification, I secured an opportunity to work as a</span></em><strong><em><span style='font-family: "Calibri Light";'>&nbsp;</span></em></strong><strong><em><span style='font-family: "Calibri Light";'>Systems</span></em></strong><strong><em><span style='font-family: "Calibri Light";'>&nbsp;</span></em></strong><strong><em><span style='font-family: "Calibri Light";'>Engineer I</span></em></strong><em><span style='font-family: "Calibri Light";'>&nbsp;</span></em><em><span style='font-family: "Calibri Light";'>at</span></em><em><span style='font-family: "Calibri Light";'>&nbsp;</span></em><strong><em><span style='font-family: "Calibri Light";'>Catchpoint</span></em></strong><em><span style='font-family: "Calibri Light";'>. During my time there, I was exposed to the world of servers, particularly Linux. I learned to monitor, maintain, and improve infrastructure and processes, thanks to my DevOps/SRE senior Ops team members. This experience motivated me to earn my</span></em><em><span style='font-family: "Calibri Light";'>&nbsp;</span></em><strong><em><span style='font-family: "Calibri Light";'>RHCSA</span></em></strong><em><span style='font-family: "Calibri Light";'>&nbsp;</span></em><em><span style='font-family: "Calibri Light";'>certification to strengthen my sysadmin foundations further.</span></em></span></p>
+    <p style="line-height: 1.15; background-color: rgb(255, 255, 255);"><span style="font-size: 16px; color: rgb(0, 0, 0);"><u><span style='font-family: "Calibri Light";'>Some key qualifications and experience that I bring to this role:</span></u></span></p>
+    <ul style="margin:0pt; padding-left:0pt;">
+        <li style="margin-top: 14pt; margin-left: 27.6pt; margin-bottom: 0pt; line-height: 1.15; padding-left: 8.4pt; font-family: serif; font-size: 16px; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><span style='font-family: "Calibri Light";'>Bachelor&rsquo;s in Information Science, along with 1 YoE as a TechOps Engineer at a product company (Catchpoint).</span></li>
+        <li style="margin-left: 27.6pt; margin-bottom: 0pt; line-height: 1.15; padding-left: 8.4pt; font-family: serif; font-size: 16px; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><span style='font-family: "Calibri Light";'>Administration, monitoring, incident response, and troubleshooting escalations in a large Linux production environment. Approaching troubleshooting incidents/alerts with curiosity, patience and persistence.</span></li>
+        <li style="margin-left: 27.6pt; margin-bottom: 0pt; line-height: 1.15; padding-left: 8.4pt; font-family: serif; font-size: 16px; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><span style='font-family: "Calibri Light";'>Brainstorm ideas and solutions collectively with other team members and participate in crises by assisting the team in investigating, identifying, and resolving problems.</span></li>
+        <li style="margin-left: 27.6pt; margin-bottom: 0pt; line-height: 1.15; padding-left: 8.4pt; font-family: serif; font-size: 16px; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><span style='font-family: "Calibri Light";'>Automating using Python and Bash scripts, with familiarity in fine-tuning existing implementations and using tools such as SaltStack (Configuration Management), Elasticsearch (Central Logging), Cloudflare, NS1 &amp; Agari (DNS Management), and F5 BIG-IP.</span></li>
+        <li style="margin-left: 27.6pt; margin-bottom: 14pt; line-height: 1.15; padding-left: 8.4pt; font-family: serif; font-size: 16px; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><span style='font-family: "Calibri Light";'>Experience setting up and maintaining a home lab infrastructure that runs multiple self-hosted services as Docker containers exposed to the internet. My home lab also comes in handy when I learn new tools and try to implement them.</span></li>
+    </ul>
+    <p style="line-height: 1.15; background-color: rgb(255, 255, 255);"><span style='font-family: "Calibri Light"; font-size: 16px; color: rgb(0, 0, 0);'><b>My ask is simple</b>: one interview.</span></p>
+    <p style="line-height: 1.15; background-color: rgb(255, 255, 255);"><span style='font-family: "Calibri Light"; font-size: 16px; color: rgb(0, 0, 0);'><b>You get</b>: a candidate who's really passionate about their quality of work and maybe a really good hire for the role.</span></p>
+    <p style="line-height: 1.15; background-color: rgb(255, 255, 255);"><span style='font-family: "Calibri Light"; font-size: 16px; color: rgb(0, 0, 0);'>I look forward to hear back from you to discuss about the potential fit of my experience, skills, and certifications for the team. Thank you for your time and consideration :)</span></p>
+<p style="line-height: 1.15; background-color: rgb(255, 255, 255);"><span style='font-family: "Calibri Light"; font-size: 16px; color: rgb(0, 0, 0);'>PS: Check out my dashboard made for destop at&nbsp;</span><a href="https://oddball.pro/" style="text-decoration:none;"><span class="Hyperlink" style='font-family: "Calibri Light"; font-size: 16px;'>oddball.pro</span></a><span style='font-family: "Calibri Light"; font-size: 16px; color: rgb(0, 0, 0);'>&nbsp;for a peek!</span></p>
+    <p style="margin-bottom: 0pt; line-height: 1.15; background-color: rgb(255, 255, 255);"><span style='font-family: "Calibri Light"; font-size: 16px; color: rgb(0, 0, 0);'>Regards,</span></p>
+    <p style="margin-bottom: 0pt; line-height: 1.15; background-color: rgb(255, 255, 255);"><span style='font-family: "Calibri Light"; font-size: 16px; color: rgb(0, 0, 0);'>Thanmai D L</span></p>
+    <p style="line-height: 1.15; background-color: rgb(255, 255, 255);">
+    <span style="font-size: 16px; color: rgb(0, 0, 0);">
+        <a href="tel:+917795667916" style="text-decoration:none; margin-left: 0px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Phone_icon.png" alt="Phone" style="height: 20px; vertical-align: middle;">
+        </a>
+		<a href="https://www.linkedin.com/in/thanmaidl" style="text-decoration:none;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" style="height: 20px; vertical-align: middle;">
+        </a>
+		<a href="https://github.com/Thanmai-DL" style="text-decoration:none;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" style="height: 20px; vertical-align: middle;">
+        </a>
+    </span>
+    <span style='font-family: "Calibri Light"; font-size: 16px; color: rgb(0, 0, 0);'>&nbsp;</span>
+</p>
+
+</body>
+
+</html>
