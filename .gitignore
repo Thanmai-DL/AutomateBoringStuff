@@ -1,2 +1,4 @@
 *.json
 *.pickle
+*.pdf
+message.html
