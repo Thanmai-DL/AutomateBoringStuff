@@ -1,5 +1,5 @@
 *.json
 *.pickle
 *.pdf
-message.html
+*.html
 info.txt
