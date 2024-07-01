@@ -12,9 +12,9 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
-from docx import Document
 
 def recipient(first, middle, last, domain):
+    # Generate possible work emails using common formats used in corparates
     f, m, l = [], [], []
     f.append(first);f.append(first[0])
     l.append(last);l.append(last[0])
@@ -28,6 +28,7 @@ def recipient(first, middle, last, domain):
                 comb.append(i + sep + k + d)
                 comb.append(k + i + d)
                 comb.append(k + sep + i + d)
+    # Runs only if middle name is specified, else ignored
     if middle != 'N/A':
         m.append(middle);m.append(middle[0])
         for i in f:
@@ -53,9 +54,6 @@ def recipient(first, middle, last, domain):
 SCOPES = ['https://www.googleapis.com/auth/gmail.send']
 
 def authenticate():
-    """Shows basic usage of the Gmail API.
-    Lists the user's Gmail labels.
-    """
     creds = None
     # The file token.pickle stores the user's access and refresh tokens, and is
     # created automatically when the authorization flow completes for the first
@@ -77,7 +75,6 @@ def authenticate():
     return creds
 
 def create_message_with_attachment(sender, to, subject, message_text, file):
-    """Create a message for an email with an attachment."""
     # Create a multipart message
     message = MIMEMultipart()
     message['to'] = to
@@ -108,7 +105,6 @@ def create_message_with_attachment(sender, to, subject, message_text, file):
     return {'raw': raw.decode()}
 
 def send_email(sender, to, subject, message_text, file, credentials):
-    """Send an email with an attachment."""
     try:
         # Create the email message
         message = create_message_with_attachment(sender, to, subject, message_text, file)
@@ -125,25 +121,27 @@ def send_email(sender, to, subject, message_text, file, credentials):
         return None
 
 def read_message_from_html(file_path):
-    """Read HTML content from a file."""
+    #Read HTML content from a file
     with open(file_path, 'r', encoding='utf-8') as file:
         return file.read()
 
 # Step 1: Authenticate and get credentials
 credentials = authenticate()
 
-# Step 2: Read the message from the Word document
+# Step 2: Read the message from the HTML file
 html_file = './message.html'
 message_text = read_message_from_html(html_file)
 
-# Step 3: Define the email details and send the email
+# Step 3: Define the email details
 sender = 'thanmaidl@gmail.com'
 subject = sys.argv[-1]
 attachment = './ThanmaiDL_Résumé.pdf'
 
+# Step 4: Check if middle name is provided
 if len(sys.argv) == 6:
     to = recipient(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
 else:
     to = recipient(sys.argv[1], 'N/A', sys.argv[2], sys.argv[3])
 
+#Step 5: Send the email
 send_email(sender, to, subject, message_text, attachment, credentials)
