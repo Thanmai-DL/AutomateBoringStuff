@@ -2,5 +2,5 @@ firstname
 middlename
 lastname
 email domain (example.com)
-Role
+Position
 Company
