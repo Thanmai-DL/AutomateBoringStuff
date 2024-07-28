@@ -34,8 +34,10 @@ Create and save the following files in the same folder containing the code:
      - If the full name of the person contains a middle name.  
        ![image](https://github.com/Thanmai-DL/AutomateBoringStuff/assets/76940939/c62044c5-38d2-40bd-baa7-95d77f3e1b63)
      - If the full name of the person does not contain a middle name.  
-       ![image](https://github.com/Thanmai-DL/AutomateBoringStuff/assets/76940939/d1666d4b-8988-4166-b320-f4080e31e083)
-       Note: Save the file with a new line after the last entry as shown in the images.
+       ![image](https://github.com/Thanmai-DL/AutomateBoringStuff/assets/76940939/d1666d4b-8988-4166-b320-f4080e31e083)  
+     - To send email to a known email address.  
+       ![image](https://github.com/user-attachments/assets/ce5f6623-6b19-411c-bd1c-9f5db60bafa6)  
+    _Note: Save the file with a new line after the last entry as shown in the images._  
   3. `[FirstnameLastname]_Resume.pdf` resume file and update the value of the attachment variable in `compose.py`.  
      ![image](https://github.com/Thanmai-DL/AutomateBoringStuff/assets/76940939/437b2f2b-5a61-4f54-bb0d-a9559ab900e6)
 ### Sending the Mail
