@@ -140,8 +140,10 @@ attachment = './ThanmaiDL_Résumé.pdf'
 # Step 4: Check if middle name is provided
 if len(sys.argv) == 6:
     to = recipient(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
-else:
+elif len(sys.argv) == 5:
     to = recipient(sys.argv[1], 'N/A', sys.argv[2], sys.argv[3])
+else:
+    to = sys.argv[1]
 
 #Step 5: Send the email
 send_email(sender, to, subject, message_text, attachment, credentials)
